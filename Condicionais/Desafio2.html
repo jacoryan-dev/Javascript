@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consumo Honda CB 300f</title>
+</head>
+<body>
+    
+    <script>
+    
+const valor_etanol = 4.06;
+const valor_gasolina = 6.12;
+const consumo_etanolKm = valor_etanol * 1/25.58
+const consumo_gasolinaKm = valor_gasolina * 1/39.75 
+
+let valor_gasto;
+
+let distanciaKm = prompt('Qual distância será percorrida em km?');
+let tipo_combustivel = prompt('Qual o tipo de combustível? ');
+
+if(tipo_combustivel === 'etanol' || tipo_combustivel === 'Etanol'){
+    valor_gasto = consumo_etanolKm * distanciaKm;
+    valor_gasto_reais = valor_gasto.toFixed(2);
+    alert('Valor gasto em etanol para percorrer ' +distanciaKm + 'km com a CB 300f' + ': R$' + valor_gasto_reais);
+
+}else if (tipo_combustivel === 'gasolina' || tipo_combustivel === 'Gasolina'){
+    valor_gasto = consumo_gasolinaKm * distanciaKm;
+    valor_gasto_reais = valor_gasto.toFixed(2);
+    alert('Valor gasto em gasolina para percorrer ' +distanciaKm + 'km com a CB 300f' + ': R$' + valor_gasto_reais);
+
+}else{
+    alert('Digite um combustivel válido (etanol/gasolina)!');
+}
+   </script>
+</body>
+</html>
