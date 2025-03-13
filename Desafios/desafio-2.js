@@ -25,7 +25,7 @@ let menorImpar = null;
 for (let i = 0; i < N ; i++) {
     const numero = gets();
 
-    if(numero % 2 === 0 && numero > maiorPar){
+    if(numero % 2 === 0 && (numero > maiorPar || maiorPar === null)){
         maiorPar = numero;
 
     }else if (numero % 2 !== 0 && (numero < menorImpar || menorImpar === null)){

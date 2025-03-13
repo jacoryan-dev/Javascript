@@ -15,8 +15,9 @@ Maior que R$ 2500.00 = 15.00%
 
 const {gets, print} = require('./funcao-auxiliar-d3');
 
-const salarioBruto = gets();
-const beneficio = gets();
+const salarioBruto = gets(); //entradas[0]
+const beneficio = gets(); //entradas[1]
+
 
 //1) função para calcular o imposto
 function calcularImposto(salario){
@@ -34,15 +35,14 @@ function calcularImposto(salario){
     return imposto;
 
 }
-
 const imposto = calcularImposto(salarioBruto);
+
 
 //2) função para calcular salario final
 function calcularSalario(salarioBruto, valorImposto, beneficio){
     const salarioLiquido = salarioBruto - valorImposto + beneficio;
     return salarioLiquido;
 }
-
 const salarioLiquido = calcularSalario(salarioBruto, imposto, beneficio);
 
 print('Salario bruto: R$'+ salarioBruto);

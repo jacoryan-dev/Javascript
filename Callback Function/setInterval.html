@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Relógio com setInterval()</h1>
+<h2 id="clock"></h2>
+
+<script>
+function mostrarHora() {
+  const agora = new Date(); // cria um objeto Date com a data/hora atual
+  const horas = agora.getHours();
+  const minutos = agora.getMinutes();
+  const segundos = agora.getSeconds();
+  
+  const horaFormatada = horas + ":" + minutos + ":" + segundos;
+  
+  document.getElementById("clock").innerHTML = horaFormatada;
+}
+
+// chama a função mostrarHora a cada 1000 milissegundos (1 segundo)
+setInterval(mostrarHora, 1000);
+
+/*Como funciona:
+A função mostrarHora() pega a hora atual e exibe no <h2 id="clock">.
+O setInterval chama a função a cada 1 segundo (1000 milissegundos).
+Ele continua executando sem parar, atualizando o relógio.*/
+</script>
+
+</body>
+</html>
+
